@@ -1,0 +1,44 @@
+
+        .task  {
+            font-family: 'Open Sans', sans-serif;
+            color:white;
+            padding:10px;
+            background-color:pink;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+                .box  {
+                    padding:30px;
+                    width: 300px;
+                    margin-left:300px;
+                    margin: auto;
+
+                }
+
+        a {
+         text-decoration: none;
+          color:white;
+          }
+
+
+        .inner-box{
+          padding:10px;
+          margin-top: 20px;
+          text-align: center;
+          height: 500px;
+        }
+
+        .imgbox {
+          float: left;
+          text-align: center;
+          width: 120px;
+          border: 1px solid gray;
+          margin: 4px;
+          padding: 6px;
+          }
+
+
+        button {
+            width: 100%;
+        }

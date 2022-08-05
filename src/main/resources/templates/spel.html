@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/spel.css?version=1">
+    <link rel="stylesheet" href="/home.css?version=1">
+</head>
+<body>
+
+<ul>
+    <li><a href="http://localhost:8080/home">Start</a></li>
+    <li><a class="active" href="http://localhost:8080/start">Öva på glosor</a></li>
+    <li><a href="http://localhost:8080/add">Lägg till glosor</a></li>
+    <li><a href="http://localhost:8080/showall">Visa alla och ta bort glosor</a></li>
+</ul>
+
+
+<div class="main">
+
+
+
+<form th:object="${glosa}" action="/spela" method="POST">
+
+
+    <p>Översätt till engelska:</p>
+    <div><label class="label" th:text="*{swe}"></label></div>
+    <input class="input-field" type="text" id="eng" name="answer" placeholder="Översätt till engelska"/>
+    <button class="kolla-svar" type="button" th:value="${glosa.eng}" onclick="visaSvar(this.value)">Kolla svar!</button>
+
+    <br>
+    <input class="svara" type="submit" value="Nästa fråga">
+
+</form>
+
+
+    <div class="respons">
+        <p th:text="${session.respons}"></p>
+    </div>
+
+    <div class="newDiv" id="myDIV">
+        <p>Rätt svar!</p>
+    </div>
+
+    <div class="felDiv" id="myFelDIV">
+        <p>Fel svar!</p>
+    </div>
+
+    <div >
+        <p  th:text="${session.numQ}"></p>
+    </div>
+
+</div>
+
+
+<div class="fusk">
+<button class="fuskknapp" onclick="myFunction()">Visa rätt svar</button>
+<button class="fuskknapp" onclick="mySecondFunction()">Göm svar</button>
+</div>
+<div class="eng" id="engSvar">
+    <p style="color:#6699ff; text-align: left;" th:text="${glosa.eng}"></p>
+</div>
+
+
+
+
+<!--
+
+<button type="button" th:onclick="'javascript:visaSvar('\' + ${glosa.eng} + '\')'">Kolla svar</button>
+
+<div>
+    <p th:text="${session.svar == glosa.eng} ? 'Rätt svar!' : 'Rätt svar är ' + ${glosa.eng}'">TRUE or FALSE</p>
+</div>
+
+
+
+Du har svarat: <p th:text="${session.svar}"></p>
+Rätt svar är: <th th:text="${glosa.eng}"></th>
+
+<th:block th:each="glosor : ${glosor}">
+    <form th:object="${glosor}" action="/spel" method="POST">
+
+
+        <p>Översätt till engelska: </p>
+        <label th:text="*{swe}"></label>
+        <input type="text" id="eng" name="playeranswer" placeholder="Svar"/>
+        <br>
+        <input type="submit" value="Kolla svar">
+
+    </form>
+</th:block>
+
+-->
+
+<!--
+
+th:value verkar vara det som syns
+
+-->
+
+
+<script src="/test.js"></script>
+
+</body>
+</html>

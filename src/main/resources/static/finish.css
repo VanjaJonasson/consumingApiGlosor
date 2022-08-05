@@ -1,0 +1,64 @@
+.finish-main{
+  background-color: pink;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
+  height: 100vh;
+  text-align: center;
+  padding-top: 20px;
+}
+
+h1{
+font-family: 'Open Sans', sans-serif;
+color: white;
+font-size: 40px;
+}
+
+p{
+font-family: 'Open Sans', sans-serif;
+color: white;
+font-size: 30px;
+}
+
+.container a {
+font-family: 'Open Sans', sans-serif;
+text-decoration: none;
+color:white;
+font-size: 20px;
+background-color: #6699ff;
+border-radius: 10px;
+padding: 10px 25px;
+text-align: center;
+display: inline-block;
+margin-top: 20px;
+}
+
+
+
+.felsvar {
+font-family: 'Open Sans', sans-serif;
+color:white;
+font-size: 20px;
+padding: 10px;
+}
+
+.felsvar tr td {
+color: black;
+background-color: white;
+border-radius: 10px;
+padding: 10px 25px;
+text-align: center;
+display: inline-block;
+margin-top: 10px;
+}
+
+
+.container {
+  width: 100%
+  /*outline: dashed 1px black;*/
+  /* Center child horizontally*/
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
