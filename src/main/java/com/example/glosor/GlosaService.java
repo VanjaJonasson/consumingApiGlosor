@@ -43,7 +43,7 @@ public class GlosaService {
 
    public boolean checkAnswer(Glosa glosa, String answer){
 
-        if (glosa.getEng().equals(answer)) {
+        if (glosa.getEng().equalsIgnoreCase(answer)) {
             return true;
 
         } else {

@@ -12,10 +12,10 @@
 
 
 <ul>
-    <li><a href="http://localhost:8080/home">Start</a></li>
-    <li><a href="http://localhost:8080/start">Öva på glosor</a></li>
-    <li><a class="active" href="http://localhost:8080/add" th:text="${val} != 1 ? 'Lägg till glosor' : 'Redigera glosa'"></a></li>
-    <li><a href="http://localhost:8080/showall">Visa alla och ta bort glosor</a></li>
+    <li><a th:href="@{/home}">Start</a></li>
+    <li><a th:href="@{/start}">Öva på glosor</a></li>
+    <li><a class="active" th:href="@{/add}" th:text="${val} != 1 ? 'Lägg till glosor' : 'Redigera glosa'"></a></li>
+    <li><a th:href="@{/showall}">Visa alla och ta bort glosor</a></li>
 </ul>
 
 <div class="add-main">

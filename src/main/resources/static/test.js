@@ -25,7 +25,7 @@ function visaSvar(s) {
   console.log("skickad parameter: ", s)
   x.style.display = 'none';
   y.style.display = 'none';
-  if (input.value === s){
+  if (input.value.toLowerCase() == s.toLowerCase()){
    x.style.display = 'block';
   } else {
   y.style.display = 'block';

@@ -39,6 +39,23 @@
           }
 
 
+        select {
+        font-family: 'Open Sans', sans-serif;
+        border-radius: 10px;
+        border: none;
+        color: grey;
+        }
+
+
         button {
-            width: 100%;
+          background-color: white;
+          color: grey;
+          border: none;
+          cursor: pointer;
+          width: 30%;
+          border-radius: 10px;
+        }
+
+        button:hover {
+          opacity: 0.8;
         }

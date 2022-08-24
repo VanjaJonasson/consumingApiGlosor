@@ -4,30 +4,45 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="start.css">
 </head>
 <body>
 
 
 <ul>
-    <li><a class="active" href="http://localhost:8080/home">Home</a></li>
-    <li><a href="http://localhost:8080/start">Öva på glosor</a></li>
-    <li><a href="http://localhost:8080/add">Lägg till glosor</a></li>
-    <li><a href="http://localhost:8080/showall">Visa alla och ta bort glosor</a></li>
+    <li><a th:href="@{/home}">Start</a></li>
+    <li><a class="active" th:href="@{/start}">Öva på glosor</a></li>
+    <li><a th:href="@{/add}">Lägg till glosor</a></li>
+    <li><a th:href="@{/showall}">Visa alla och ta bort glosor</a></li>
 </ul>
 
 <div class="box">
 
     <div class="inner-box">
+        <form class="task" action="/numq">
+            <label for="numbers">Välj hur många frågor du vill svara på:</label>
+            <select id="numbers" name="num">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option th:if="${session.numQuestions != null}" th:text="${session.numQuestions}" selected></option>
 
-        <p class="task"><a style="text-decoration: none;" href="/spel/1">Lätta glosor</a></p>
+            </select>
+            <br><br>
+            <button type="submit">Välj</button>
+        </form>
 
-        <p class="task"><a style="text-decoration: none;" href="/spel/2">Medelsvåra glosor</a></p>
 
-        <p class="task"><a style="text-decoration: none;" href="/spel/3">Svåra glosor</a></p>
+        <p class="task"><a style="text-decoration: none;" th:href="@{/spel/1/}">Lätta glosor</a></p>
+
+        <p class="task"><a style="text-decoration: none;" th:href="@{/spel/2/}">Medelsvåra glosor</a></p>
+
+        <p class="task"><a style="text-decoration: none;" th:href="@{/spel/3/}">Svåra glosor</a></p>
     </div>
 
 </div>
+
 
 <!--
 <div class="imgbox" id="imgbox1">Box 1<br>

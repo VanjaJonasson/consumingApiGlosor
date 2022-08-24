@@ -40,13 +40,13 @@ public class GlosaController {
 
     @PostMapping("/save")
     public String addNewGlosa(@ModelAttribute Glosa glosa, @RequestParam String category, RestTemplate restTemplate) {
-        Integer num = Integer.valueOf(category);
+        //Integer num = Integer.valueOf(category);
         System.out.println("om glosa är ny: " + glosa.isNew()); //isNew funkar
         if (glosa.isNew()) {
-            restTemplate.postForObject("http://localhost:8081/glosa/" + num, glosa, Glosa.class);
+            restTemplate.postForObject("http://localhost:8081/glosa/" + category, glosa, Glosa.class);
         }
         else {
-            restTemplate.put("http://localhost:8081/glosa/" + num, glosa, Glosa.class);
+            restTemplate.put("http://localhost:8081/glosa/" + category, glosa, Glosa.class);
         }
 
         return "redirect:/showall";
@@ -105,6 +105,12 @@ public class GlosaController {
         return "redirect:/showall";
     }
 
+    @GetMapping("/numq")
+    public String numOfQuestions(HttpSession session, @RequestParam int num) {
+        session.setAttribute("numQuestions", num);
+        System.out.println("sparat nummer: " + num);
+        return "redirect:/start";
+    }
 
     @GetMapping("/home")
     public String home(HttpSession session) {
@@ -175,8 +181,10 @@ public class GlosaController {
         model.addAttribute("lista", p.getAnswers());
         model.addAttribute("player", p);
 
+        int num = (int) session.getAttribute("numQuestions");
 
-        if (p.getNum() >= 3) {
+
+        if (p.getNum() >= num) {
             session.setAttribute("respons", null);
             return "finish";
         } else {

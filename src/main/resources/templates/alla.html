@@ -10,10 +10,10 @@
 <body>
 
 <ul>
-    <li><a href="http://localhost:8080/home">Start</a></li>
-    <li><a href="http://localhost:8080/start">Öva på glosor</a></li>
-    <li><a href="http://localhost:8080/add">Lägg till glosor</a></li>
-    <li><a class="active" href="http://localhost:8080/showall">Visa alla och ta bort glosor</a></li>
+    <li><a th:href="@{/home}">Start</a></li>
+    <li><a th:href="@{/start}">Öva på glosor</a></li>
+    <li><a th:href="@{/add}">Lägg till glosor</a></li>
+    <li><a class="active" th:href="@{/showall}">Visa alla och ta bort glosor</a></li>
 </ul>
 
 <div class="alla-main">
