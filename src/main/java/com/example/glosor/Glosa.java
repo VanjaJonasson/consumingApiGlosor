@@ -11,7 +11,6 @@ public class Glosa {
     private Integer id;
     private String eng;
     private String swe;
-
     private Category category;
 
     public Glosa() {
@@ -63,7 +62,6 @@ public class Glosa {
     public boolean isNew() {
         return this.id == null;
     }
-
 
     @Override
     public String toString() {

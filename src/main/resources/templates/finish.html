@@ -17,8 +17,7 @@
 
 <div class="finish-main">
 
-
-    <td th:switch="${#lists.size(lista)}">
+    <td th:if="${session.numQuestions == 5}" th:switch="${#lists.size(lista)}">
         <span th:case="'0'">
             <h1>Wow, alla rätt!</h1>
         </span>
@@ -30,6 +29,27 @@
         </span>
         <span th:case="'3'" >
             <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'4'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'5'" >
+            <h1>Ajdå, alla fel denna gång.</h1>
+        </span>
+    </td>
+
+    <td th:if="${session.numQuestions == 10}" th:switch="${#lists.size(lista)}">
+        <span th:case="'0'">
+            <h1>Wow, alla rätt!</h1>
+        </span>
+        <span th:case="'1'" >
+            <h1>Bra jobbat!</h1>
+        </span>
+        <span th:case="'2'" >
+            <h1>Bra jobbat!</h1>
+        </span>
+        <span th:case="'3'" >
+            <h1>Bra jobbat!</h1>
         </span>
         <span th:case="'4'" >
             <h1>Du behöver öva lite mer!</h1>
@@ -54,39 +74,146 @@
         </span>
     </td>
 
+    <td th:if="${session.numQuestions == 15}" th:switch="${#lists.size(lista)}">
+        <span th:case="'0'">
+            <h1>Wow, alla rätt!</h1>
+        </span>
+        <span th:case="'1'" >
+            <h1>Bra jobbat!</h1>
+        </span>
+        <span th:case="'2'" >
+            <h1>Bra jobbat!</h1>
+        </span>
+        <span th:case="'3'" >
+            <h1>Bra jobbat!</h1>
+        </span>
+        <span th:case="'4'" >
+            <h1>Bra jobbat!</h1>
+        </span>
+        <span th:case="'5'" >
+            <h1>Bra jobbat!</h1>
+        </span>
+        <span th:case="'6'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'7'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'8'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'9'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'10'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'11'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'12'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'13'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="14'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'15'" >
+            <h1>Ajdå, alla fel denna gång.</h1>
+        </span>
+    </td>
 
-<div>
-<p th:text="${#lists.size(lista)} <= 3 ? 'Du svarade rätt på ' + ${player.numCorrect} + ' av '+ ${player.num} + ' frågor!' : 'Du svarade rätt på ' + ${player.numCorrect} + ' av '+ ${player.num} + ' frågor.'"></p>
-</div>
+    <td th:if="${session.numQuestions == 20}" th:switch="${#lists.size(lista)}">
+        <span th:case="'0'">
+            <h1>Wow, alla rätt!</h1>
+        </span>
+        <span th:case="'1'" >
+            <h1>Bra jobbat!</h1>
+        </span>
+        <span th:case="'2'" >
+            <h1>Bra jobbat!</h1>
+        </span>
+        <span th:case="'3'" >
+            <h1>Bra jobbat!</h1>
+        </span>
+        <span th:case="'4'" >
+            <h1>Bra jobbat!</h1>
+        </span>
+        <span th:case="'5'" >
+            <h1>Bra jobbat!</h1>
+        </span>
+        <span th:case="'6'" >
+            <h1>Bra jobbat!</h1>
+        </span>
+        <span th:case="'7'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'8'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'9'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'10'" >
+            <h1>Ajdå, alla fel denna gång.</h1>
+        </span>
+        <span th:case="'11'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'12'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'13'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'14'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'15'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'16'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'17'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'18'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'19'" >
+            <h1>Du behöver öva lite mer!</h1>
+        </span>
+        <span th:case="'20'" >
+            <h1>Ajdå, alla fel denna gång.</h1>
+        </span>
+    </td>
+
+
+    <div>
+        <p th:text="${#lists.size(lista)} <= 3 ? 'Du svarade rätt på ' + ${player.numCorrect} + ' av '+ ${player.num} + ' frågor!' : 'Du svarade rätt på ' + ${player.numCorrect} + ' av '+ ${player.num} + ' frågor.'"></p>
+    </div>
 
 
     <div class="felsvar" th:if="${#lists.size(lista)} >= 1">
 
         <p class="felsvar">De här glosorna behöver du öva mer på:</p>
 
-<tr th:each="svar: ${lista}">
-    <td th:text="${svar}" />
-    <br>
+        <tr th:each="svar: ${lista}">
+            <td th:text="${svar}" />
+            <br>
 
-</tr>
+        </tr>
     </div>
 
 
     <div class="container">
-        <div><a href="http://localhost:8080/start">Öva igen och nollställ!</a></div>
+        <div><a th:href="@{/start}">Öva igen och nollställ!</a></div>
     </div>
 
 </div>
 
 </body>
 </html>
-
-<!--
-
-<h1 th:text="'Du har svarat på '+ ${player.num} + ' st glosor och svarat rätt på ' + ${player.numCorrect} + ' st glosor.'"></h1>
-
-<tr th:each="svar: ${player}">
-    <td th:text="'Du har svarat på '+ ${svar.num} + ' st glosor och svarat rätt på ' + ${svar.numCorrect} + ' st glosor.'" />
-
-</tr>
--->
