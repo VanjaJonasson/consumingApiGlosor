@@ -14,13 +14,13 @@
 <ul>
     <li><a th:href="@{/home}">Start</a></li>
     <li><a th:href="@{/start}">Öva på glosor</a></li>
-    <li><a class="active" th:href="@{/add}" th:text="${val} != 1 ? 'Lägg till glosor' : 'Redigera glosa'"></a></li>
+    <li><a class="active" th:href="@{/add}" th:text="${edit} != 1 ? 'Lägg till glosor' : 'Redigera glosa'"></a></li>
     <li><a th:href="@{/showall}">Visa alla och ta bort glosor</a></li>
 </ul>
 
 <div class="add-main">
 
-    <h1 th:text="${val} != 1 ? 'Lägg till glosa' : 'Redigera glosa'"></h1>
+    <h1 th:text="${edit} != 1 ? 'Lägg till glosa' : 'Redigera glosa'"></h1>
 
 <form th:object="${glosa}" action="/save" method="POST">
 

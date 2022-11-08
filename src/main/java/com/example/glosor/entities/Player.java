@@ -1,4 +1,4 @@
-package com.example.glosor;
+package com.example.glosor.entities;
 
 import javax.persistence.*;
 import java.util.ArrayList;

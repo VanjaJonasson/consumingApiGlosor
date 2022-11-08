@@ -1,6 +1,6 @@
-package com.example.glosor;
+package com.example.glosor.entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.example.glosor.entities.Category;
 import org.springframework.lang.NonNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
