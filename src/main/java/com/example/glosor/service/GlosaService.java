@@ -73,7 +73,7 @@ public class GlosaService {
             restTemplate.postForObject("http://localhost:8081/glosa/" + category, glosa, Glosa.class);
         }
         else {
-            restTemplate.put("http://localhost:8081/glosa/" + category, glosa, Glosa.class);
+            restTemplate.put("http://localhost:8081/glosa/" + category + "/" + glosa.getId(), glosa, Glosa.class);
         }
     }
 }
