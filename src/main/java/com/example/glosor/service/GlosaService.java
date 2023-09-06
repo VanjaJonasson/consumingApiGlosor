@@ -55,12 +55,10 @@ public class GlosaService {
         return name;
     }
 
-    /* doesn´t work after redoing apiGlosor
     public List getAllGlosorInCat(int num) {
         List<Glosa> glosorInCat = restTemplate.getForObject("http://localhost:8081/glosorincat?num=/" + num, ArrayList.class);
         return glosorInCat;
     }
-    */
 
 
     public List<Category> getCategories() {
@@ -71,9 +69,11 @@ public class GlosaService {
     public void save(Glosa glosa, String category) {
         if (glosa.isNew()) {
             restTemplate.postForObject("http://localhost:8081/glosa/" + category, glosa, Glosa.class);
+            System.out.println("post is being used");
         }
         else {
             restTemplate.put("http://localhost:8081/glosa/" + category + "/" + glosa.getId(), glosa, Glosa.class);
+            System.out.println("put is being used");
         }
     }
 }
